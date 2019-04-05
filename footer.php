@@ -17,6 +17,33 @@
 			</div><!-- #content -->
 		</main>
 
+		<!-- DESTAQUES DE COTAÇÕES -->
+		<div class="destaque-cotacoes row">
+			<?php if( have_rows('seguro_cotacao_pf', 'option') || have_rows('seguro_cotacao_pj', 'option') ): ?>
+				<div class="escondido" id="listaCotacoes" class="col-12">
+					<div class="col-6" style="display:inline-block;">
+						<h4 style="color:#fff !important;">Pessoa Física</h4>
+					    <?php while( have_rows('seguro_cotacao_pf', 'option') ): the_row(); ?>
+					       	<?php $cotacao = get_sub_field('link_seguro_cotacao'); ?>
+							   	<a target="_blank" class="cotacao-online-seguro" rel="external" href="<?php echo $cotacao['url']; ?>" title="<?php echo $cotacao['title']; ?>" target="<?php $cotacao['target']; ?>">
+						   			<?php echo $cotacao['title'].'<i class="fas fa-external-link"></i>'; ?>
+						   		</a>
+						<?php endwhile; ?>
+					</div>
+					<div class="col-6" style="display:inline-block;">
+						<h4 style="color:#fff !important;">Empresa</h4>
+					    <?php while( have_rows('seguro_cotacao_pj', 'option') ): the_row(); ?>
+					       	<?php $cotacao = get_sub_field('link_seguro_cotacao'); ?>
+							   	<a target="_blank" class="cotacao-online-seguro" rel="next" href="<?php echo $cotacao['url']; ?>" title="<?php echo $cotacao['title']; ?>" target="<?php $cotacao['target']; ?>">
+						   			<?php echo $cotacao['title'].'<i class="fas fa-external-link"></i>'; ?>
+						   		</a>
+						<?php endwhile; ?>
+					</div>
+				</div>
+				<div id="maisCotacoes">COTAÇÃO ONLINE <i class="fa fa-caret-up" id="setaMaisCotacoes"></i></div>
+			<?php endif; ?>
+		</div>
+		
 		<footer id="colophon" class="site-footer" role="contentinfo">
 			<div class="wrap">
 				<?php
@@ -48,32 +75,7 @@
 			<script defer async src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 		</footer><!-- #colophon -->
 		
-		<!-- DESTAQUES DE COTAÇÕES -->
-		<div class="destaque-cotacoes row">
-			<?php if( have_rows('seguro_cotacao_pf', 'option') || have_rows('seguro_cotacao_pj', 'option') ): ?>
-				<div class="escondido" id="listaCotacoes" class="col-12">
-					<div class="col-6" style="display:inline-block;">
-						<h4 style="color:#fff !important;">Pessoa Física</h4>
-					    <?php while( have_rows('seguro_cotacao_pf', 'option') ): the_row(); ?>
-					       	<?php $cotacao = get_sub_field('link_seguro_cotacao'); ?>
-							   	<a target="_blank" class="cotacao-online-seguro" rel="external" href="<?php echo $cotacao['url']; ?>" title="<?php echo $cotacao['title']; ?>" target="<?php $cotacao['target']; ?>">
-						   			<?php echo $cotacao['title'].'<i class="fas fa-external-link"></i>'; ?>
-						   		</a>
-						<?php endwhile; ?>
-					</div>
-					<div class="col-6" style="display:inline-block;">
-						<h4 style="color:#fff !important;">Empresa</h4>
-					    <?php while( have_rows('seguro_cotacao_pj', 'option') ): the_row(); ?>
-					       	<?php $cotacao = get_sub_field('link_seguro_cotacao'); ?>
-							   	<a target="_blank" class="cotacao-online-seguro" rel="next" href="<?php echo $cotacao['url']; ?>" title="<?php echo $cotacao['title']; ?>" target="<?php $cotacao['target']; ?>">
-						   			<?php echo $cotacao['title'].'<i class="fas fa-external-link"></i>'; ?>
-						   		</a>
-						<?php endwhile; ?>
-					</div>
-				</div>
-				<div id="maisCotacoes">COTAÇÃO ONLINE <i class="fa fa-caret-up" id="setaMaisCotacoes"></i></div>
-			<?php endif; ?>
-		</div>
+		
 		<script>
 			const linkCotacoes = document.querySelector('#maisCotacoes');
 			const setaCotacoes = document.querySelector('#setaMaisCotacoes');
