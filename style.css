@@ -12,7 +12,7 @@
 
  Template:	twentyseventeen
 
- Version:	1.0.0
+ Version:	1.0.1
 
  License:	GNU General Public License v2 or later
 
@@ -67,6 +67,13 @@ a:hover, a:hover h1, a:hover h2, a:hover h3{
 
 	/*font-size: 101%;*/
 
+}
+
+.visivel{
+	display: block !important;
+}
+.gf_browser_chrome .gform_wrapper{
+	display: block !important;
 }
 
 /* Destaque Cotações */
@@ -282,7 +289,7 @@ strong.breadcrumb_last{
 	text-align: justify !important;
 
 }
-
+@media only screen and (min-width: 600px){
 
 	#masthead{
 
@@ -291,6 +298,16 @@ strong.breadcrumb_last{
 		top: 80px;
 
 	}
+	
+	ul#top-menu.menu{
+
+		background-color: transparent;
+
+		/*float: right;*/
+
+	}
+
+}
 
 	.navigation-top .wrap{
 
@@ -302,17 +319,17 @@ strong.breadcrumb_last{
 
 	.menu-topo-institucional-container{
 
-		margin-top: -12px;
+		margin-top: 0;
 
 	}
 
-	ul#top-menu.menu{
 
-		background-color: transparent;
-
-		/*float: right;*/
-
+	ul#top-menu.menu {
+    
+    	background-color: #03a9f4;
+    
 	}
+
 
 	ul#top-menu.menu li:first-child{
 
@@ -726,7 +743,7 @@ img.seguradora-imagem {
 
 }
 
-.imagemSolucao, .seguradora-imagem{
+.imagemSolucao, .seguradora-imagem, .imagemSolucao img{
 
 	-webkit-transition: all 1s ease-in-out !important;
 
@@ -948,7 +965,7 @@ a.chamadaArtigo h5{
 
 	height: 150px;
 
-	margin: 24px auto -10px auto;
+	margin: 24px auto;
 
 	display: block;
 
@@ -982,7 +999,7 @@ a.linkSolucaoInfo button, a.linkSolucao button, a.wp-block-button__link{
 
 	border-radius: 30px;
 
-	margin: 0 auto 10px auto;
+	margin: 0 10px 10px auto;
 
 	line-height: 10px;
 
@@ -991,6 +1008,8 @@ a.linkSolucaoInfo button, a.linkSolucao button, a.wp-block-button__link{
 	font-weight: 500;
 
 	color: #fff;
+
+	padding: 16px;
 
 }
 
