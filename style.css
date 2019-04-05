@@ -289,7 +289,7 @@ strong.breadcrumb_last{
 	text-align: justify !important;
 
 }
-
+@media only screen and (min-width: 600px){
 
 	#masthead{
 
@@ -298,6 +298,16 @@ strong.breadcrumb_last{
 		top: 80px;
 
 	}
+	
+	ul#top-menu.menu{
+
+		background-color: transparent;
+
+		/*float: right;*/
+
+	}
+
+}
 
 	.navigation-top .wrap{
 
@@ -309,17 +319,17 @@ strong.breadcrumb_last{
 
 	.menu-topo-institucional-container{
 
-		margin-top: -12px;
+		margin-top: 0;
 
 	}
 
-	ul#top-menu.menu{
 
-		background-color: transparent;
-
-		/*float: right;*/
-
+	ul#top-menu.menu {
+    
+    	background-color: #03a9f4;
+    
 	}
+
 
 	ul#top-menu.menu li:first-child{
 
