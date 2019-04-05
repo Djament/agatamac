@@ -58,8 +58,8 @@
 						<h4 style="color:#fff !important;">Pessoa Física</h4>
 					    <?php while( have_rows('seguro_cotacao_pf', 'option') ): the_row(); ?>
 					       	<?php $cotacao = get_sub_field('link_seguro_cotacao'); ?>
-							   	<a target="_blank" class="cotacao-online-seguro" rel="external" href="<?php echo $cotacao['url']; ?>" title="<?php echo $cotacao['title']; ?>" target="<?php $cotacao['target']; ?>">
-						   			<?php echo $cotacao['title'].'<i class="fas fa-external-link"></i>'; ?>
+							   	<a target="_blank" class="cotacao-online-seguro" rel="external" href="<?php echo $cotacao['url']; ?>" title="<?php echo $cotacao['title']; ?>" target="<?php echo $cotacao['target']; ?>">
+						   			<?php echo $cotacao['title'] . '<i class="fas fa-external-link"></i>'; ?>
 						   		</a>
 						<?php endwhile; ?>
 					</div>
@@ -67,7 +67,7 @@
 						<h4 style="color:#fff !important;">Empresa</h4>
 					    <?php while( have_rows('seguro_cotacao_pj', 'option') ): the_row(); ?>
 					       	<?php $cotacao = get_sub_field('link_seguro_cotacao'); ?>
-							   	<a target="_blank" class="cotacao-online-seguro" rel="next" href="<?php echo $cotacao['url']; ?>" title="<?php echo $cotacao['title']; ?>" target="<?php $cotacao['target']; ?>">
+							   	<a target="_blank" class="cotacao-online-seguro" rel="next" href="<?php echo $cotacao['url']; ?>" title="<?php echo $cotacao['title']; ?>" target="<?php echo $cotacao['target']; ?>">
 						   			<?php echo $cotacao['title'].'<i class="fas fa-external-link"></i>'; ?>
 						   		</a>
 						<?php endwhile; ?>
