@@ -1,0 +1,1397 @@
+/*
+
+ Theme Name: Agata Mac
+
+ Theme URI:	https://agatamacsaude.com.br
+
+ Description: Tema desenvolvido para a corretora de seguros corporativos Agata Mac Saúde
+
+ Author:	 Marcelo Diament, Djament Comunicação
+
+ Author URI: https://djament.com.br/cv
+
+ Template:	twentyseventeen
+
+ Version:	1.0.0
+
+ License:	GNU General Public License v2 or later
+
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+ Tags:	bootstrap, left-sidebar, responsive-layout, accessibility-ready
+
+ Text Domain: agatamac
+
+*/
+
+html, body, a{
+
+	scroll-behavior: smooth;
+
+}	
+
+.clearfix{
+
+	display: table;
+
+	content: '';
+
+	clear: both;
+
+}
+
+a, a:hover{
+
+	-webkit-transition: all 0.4s ease-in-out;
+
+	-o-transition: all 0.4s ease-in-out;
+
+	transition: all 0.4s ease-in-out;
+
+	text-decoration: none !important;
+
+}
+
+a:hover, a:hover h1, a:hover h2, a:hover h3{
+
+	/*font-size: 101%;*/
+
+}
+
+/* Destaque Cotações */
+
+div.destaque-cotacoes{
+
+	display: block;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	background-color: #227aaa;
+	color: #fff;
+	text-decoration: none;
+	z-index: 999;
+	border-radius: 30px;
+	margin: 30px;
+	padding: 15px;
+	/*width: 60%;*/
+}
+
+#maisCotacoes{
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+	display: block;
+	text-decoration: none;
+	cursor: pointer;
+	/*width: 200px;*/
+	height: auto;
+}
+
+#listaCotacoes{
+	/*height: auto;*/
+    vertical-align: top !important;
+    /*display: flex !important;*/
+	-webkit-transition: all 0.6s ease-in-out;
+	-o-transition: all 0.6s ease-in-out;
+	transition: all 0.6s ease-in-out;
+}
+
+div.destaque-cotacoes a i.fa.fa-caret-down{
+
+	color: #fff;
+
+	font-weight: bold;
+
+	text-align: right;
+
+	text-decoration: none;
+
+}
+
+/*@keyframe girar180{
+
+	0% : transform(rotate: 0deg);
+
+	100% : transform(rotate: 180deg);
+
+}*/
+
+a.cotacao-online-seguro{
+
+	color: #fff;
+
+    font-weight: normal;
+
+    text-align: left;
+
+    line-height: 16px !important;
+
+    display: block;
+
+    padding-left: 5px;
+
+    margin-bottom: 8px;
+
+    padding-right: 5px;
+
+}
+
+.escondido{
+
+	display: none !important;
+
+	opacity: 0 !important;
+
+}
+
+/* Menu Topo */
+
+#masthead{
+
+	z-index: 999999;
+
+}
+
+.main-navigation li{
+
+	border: none;
+
+}
+
+.dropdown-toggle::after, .dropdown-toggle.toggled-on::after{
+
+	display: none !important;
+
+}
+
+.navigation-top{
+
+	background-color: rgba(3,169,244,1);
+
+	border: none !important;
+
+	-webkit-transition: all 0.4s ease-in-out;
+
+	-o-transition: all 0.4s ease-in-out;
+
+	transition: all 0.4s ease-in-out;
+
+}
+
+.main-navigation a {
+
+	color: #607d8b;
+
+	margin: -10px auto 20px auto;
+
+}
+
+.main-navigation a:hover{
+
+		color: #000;
+
+		font-weight: bolder;
+
+		text-decoration: none !important;
+
+}
+
+.navigation-top.site-navigation-fixed{
+
+	height: 50px;
+
+}
+
+.navigation-top .current-menu-item > a:hover, .main-navigation li li.current_page_item a:first-child, .main-navigation li li.current-menu-item a:first-child{
+
+	color: #767676;
+
+	background-color: none !important;
+
+	text-decoration: none !important;
+
+	border: none;
+
+}
+
+.main-navigation ul {
+
+	background: #fafafa;
+
+}
+
+.main-navigation li li.focus > a, .main-navigation li li:focus > a, .main-navigation li li:hover > a, .main-navigation li li a:hover, .main-navigation li li a:focus, .main-navigation li li.current_page_item a:hover, .main-navigation li li.current-menu-item a:hover, .main-navigation li li.current_page_item a:focus, .main-navigation li li.current-menu-item a:focus{
+
+	color: #227aaa;
+
+	background-color: #fff;
+
+}
+
+img.logo-menu{
+
+	vertical-align: middle;
+
+	border-style: none;
+
+	margin: 3px 10px 0 0;
+
+	padding-bottom: 5px;
+
+}
+
+p#breadcrumbs{
+
+	font-size: 14px;
+
+}
+
+p#breadcrumbs a{
+
+	font-style: none;
+
+	color: #3e3e3e;
+
+}
+
+strong.breadcrumb_last{
+
+	font-weight: bold !important;
+
+}
+
+/* Título Página */
+
+
+
+/* Archive */
+
+.entry-content p{
+
+	text-align: justify !important;
+
+}
+
+
+	#masthead{
+
+		z-index: 999999;
+
+		top: 80px;
+
+	}
+
+	.navigation-top .wrap{
+
+		float: left;
+
+		min-width: 100% !important;
+
+	}
+
+	.menu-topo-institucional-container{
+
+		margin-top: -12px;
+
+	}
+
+	ul#top-menu.menu{
+
+		background-color: transparent;
+
+		/*float: right;*/
+
+	}
+
+	ul#top-menu.menu li:first-child{
+
+		position: absolute;
+
+		top: 2;
+
+		left: 0;
+
+	}
+
+	.navigation-top .current-menu-item > a, .navigation-top .current_page_item > a {
+
+		color: #fff;
+
+	}
+
+	.main-navigation a{
+
+		color: #fff;
+
+		margin: auto;
+
+		background-color: none;
+
+	}
+
+	.main-navigation a:hover{
+
+		color: #fff !important;
+
+		font-weight: bold;
+
+		text-decoration: none !important;
+
+		filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.3));
+
+	}
+
+	.main-navigation li li:hover, .main-navigation li li.focus {
+
+		background: inherit;
+
+	}
+
+	ul#top-menu.menu li:first-child{
+
+		position: initial !important;
+
+	}
+
+	ul#top-menu.menu li:first-child a{
+
+		margin-right: 120px;
+
+	}
+
+	ul.sub-menu li{
+
+		margin: 10px auto !important;
+
+		position: initial !important;
+
+	}
+
+
+
+	ul.sub-menu li:first-child a{
+
+		margin: -10px auto 20px auto !important;
+
+	}
+
+	ul.sub-menu li a{
+
+		color: #607d8b;
+
+		/*margin: -10px auto 20px auto;*/
+
+		background-color: none;
+
+	}
+
+	ul.sub-menu li a:hover{
+
+		color: #000 !important;
+
+		font-weight: inherit;
+
+		/*font-size: inherit;*/
+
+		/*text-decoration: none !important;
+
+		filter: none;
+
+		margin: inherit;
+
+		padding: inherit;
+
+		line-height: inherit;
+
+		font-size: inherit;*/
+
+	}
+
+	.site-header {
+
+		background-color: transparent;
+
+	}
+
+	.has-sidebar:not(.error404) #primary {
+
+		width: 70%;
+		margin-top: 90px;
+
+	}
+
+	.has-sidebar #secondary {
+
+		width: 25%;
+
+	}
+
+	div#wpcf7-f157-p158-o1{
+
+		width: 100% !important;
+		padding: 40px;
+
+	}
+
+	a.cotacao-online-seguro{
+		line-height: 28px !important;
+	}
+
+}
+
+/* Post */
+
+aside#secondary.widget-area{
+
+	position: sticky;
+
+	top: 140px;
+
+}
+
+ul.lista-post, ul.lista-page{
+
+	margin-left: 40px;
+
+}
+
+strong{
+
+	font-weight: inherit !important;
+
+}
+
+hr {
+
+	margin-top: 2rem !important;
+
+	margin-bottom: 2rem !important;
+
+}
+
+
+
+/* Page */
+
+
+
+#conteudoPrincipal{
+
+	margin-top: 100px;
+
+}
+
+#conteudoPrincipal ul {
+
+	list-style-image: url('images/check.png');
+
+}
+
+#conteudoPrincipal ul li{
+
+	margin: 10px auto 10px 15px;
+
+}
+
+
+
+:not(.has-sidebar).blog #primary article, :not(.page-one-column):not(.has-sidebar).archive #primary article, :not(.has-sidebar).search #primary article, :not(.has-sidebar).error404 #primary .page-content, .error404.has-sidebar #primary .page-content, body:not(.archive).page-two-column #primary .entry-content, body.page-two-column #comments{
+
+	float: left;
+
+	width: 100%;
+
+}
+
+
+
+/* Footer */
+
+div.site-info{
+
+	width: 100%;
+
+}
+
+a.imprint{
+
+	float: right;
+
+}
+
+
+
+/* Geral */
+
+.entry-content a, .entry-summary a, .widget a, .site-footer .widget-area a, .posts-navigation a, .widget_authors a strong, .entry-content a:hover, .entry-summary a:hover, .widget a:hover, .site-footer .widget-area a:hover, .posts-navigation a:hover, .widget_authors a strong:hover {
+
+	box-shadow: none;
+
+	color: #227aaa;
+
+	cursor: pointer;
+
+}
+
+span.screen-reader-text{
+
+	text-decoration: none !important;
+
+}
+
+/*.site-content-contain {
+
+	margin-top: 0;
+
+}*/
+
+
+
+/* Banner Topo */
+
+#content{
+
+	max-width: 100vw !important;
+
+}
+
+.banner-container{
+
+	background-color: #03A9F4;
+
+	/*background-image: -webkit-linear-gradient(left, #ffc107, #98d54b, #00d79d, #00cede, #39bbf4);
+
+	background-image: -o-linear-gradient(left, #ffc107, #98d54b, #00d79d, #00cede, #39bbf4);
+
+	background-image: linear-gradient(to right, #ffc107, #98d54b, #00d79d, #00cede, #39bbf4);*/
+
+	/*margin: -60px 0 0 -73px!important;
+
+	padding: 80px 0 0 50px!important;
+
+	width: 100vw !important;*/
+
+}
+
+#bannerTopo{
+
+	padding-top: 42px;
+
+}
+
+#bannerTopo h1, #bannerTopo h2{
+
+	color: #fff;
+
+	background-color: #03a9f4!important;
+
+	-webkit-transition: 0.4s all ease-in-out;
+
+	-o-transition: 0.4s all ease-in-out;
+
+	transition: 0.4s all ease-in-out;
+
+}
+
+#bannerTopo h1:hover{
+
+	/*font-size: 2.55rem;*/
+	/*font-weight: bolder;*/
+
+}
+
+#bannerTopo h2:hover{
+	font-weight: bold;
+	/*font-size: 2.02rem;*/
+
+}
+
+.banner-topo-img{
+
+	float: right;
+
+	margin-top: 132px;
+
+	margin-bottom: -36px;
+
+}
+
+.contatos-dir {
+
+	right: 111px;
+
+	position: absolute;
+
+	bottom: -75px;
+
+}
+
+@media screen and (min-width: 48em){
+	.contatos-dir {
+		right: 175px;
+	}
+}
+
+
+i.fa.fa-phone{
+
+	transform: rotate(90deg);
+
+}
+
+i.contatos-topo {
+
+	background-color: #fff;
+
+	color: #03A9F4;
+
+	border-radius: 50%;
+
+	width: 50px;
+
+	height: 50px;
+
+	line-height: 50px;
+
+	font-size: 29px;
+
+	text-align: center;
+
+	margin: auto 10px;
+
+	-webkit-transition: 0.8s all ease-in-out;
+
+	-o-transition: 0.8s all ease-in-out;
+
+	transition: 0.8s all ease-in-out;
+
+}
+
+i.contatos-topo:hover{
+
+	-webkit-filter: drop-shadow(3px 3px 2px #007ab1);
+
+	-o-filter: drop-shadow(3px 3px 2px #007ab1);
+
+	filter: drop-shadow(3px 3px 2px #007ab1);
+
+	/*font-size: 30px;*/
+
+}
+
+/* Vitrine Soluções */
+
+article{
+
+	border: none !important;
+
+}
+
+#vitrineSolucoes, #vitrineSolucoesPF, #vitrineSeguradoras, #postsRecentes{
+
+	/*width: 100vw;*/
+
+	/* margin-left: -73px; */
+
+	margin-top: 72px;
+
+	padding: 30px;
+
+	text-align: center;
+
+	border: none !important;
+
+}
+
+img.seguradora-imagem {
+
+	width: 120px;
+
+	height: 120px;
+
+	display: block;
+
+	margin: 10px auto !important;
+
+}
+
+.imagemSolucao, .seguradora-imagem{
+
+	-webkit-transition: all 1s ease-in-out !important;
+
+	-o-transition: all 1s ease-in-out !important;
+
+	transition: all 1s ease-in-out !important;
+
+}
+
+.imagemSolucao:hover img, .seguradora-imagem:hover{
+
+	-webkit-filter: drop-shadow(5px 5px 3px #227aaa) !important;
+
+	-o-filter: drop-shadow(5px 5px 3px #227aaa) !important;
+
+	filter: drop-shadow(5px 5px 3px #227aaa) !important;
+
+}
+
+#postsRecentes{
+
+	/*background-image: url(images/bg-ondas.png);
+
+	background-repeat: no-repeat;
+
+	background-attachment: fixed;
+
+	background-size: cover;
+
+	background-position: bottom;*/
+
+	margin-top: 72px;
+
+	padding: 30px;
+
+	text-align: left;
+
+	border: none !important;
+
+	background-color: #03a9f4;
+
+}
+
+#postsRecentes h3{
+
+	text-align: center;
+
+}
+
+#postsRecentes div.row article{
+
+	margin: 10px auto;
+
+	/*padding: 0;*/
+
+	/*margin: 10px;*/
+
+}
+
+#postsRecentes div.row article div{
+
+	background-color: #fff;
+
+	border-radius: 20px;
+
+	padding-bottom: 1px;
+
+	margin: 10px;
+
+}
+
+#postsRecentes div.row article div a.recent button{
+
+	text-align: center;
+
+}
+
+#vitrineSolucoes div article, #vitrineSolucoesPF div article, #vitrineSeguradoras div article{
+
+	display: inline-block;
+
+}
+
+#vitrineSolucoes div article h2, #vitrineSolucoesPF div article h2, #vitrineSeguradoras div article h2{
+
+	font-size: 20px;
+
+}
+
+#vitrineSolucoes div h3, #vitrineSolucoesPF div h3, #vitrineSeguradoras div h3{
+
+	font-size: 32px;
+
+	font-weight: bold;
+
+	color: #005b88;
+
+}
+
+#postsRecentes h3{
+
+	font-size: 32px;
+
+	font-weight: bold;
+
+	color: #fff;
+
+	margin: 20px auto;
+
+}
+
+#vitrineSolucoes div article p, #vitrineSolucoesPF div article p, #vitrineSeguradoras div article p{
+
+	min-height: 50px;
+
+}
+
+#vitrineSeguradoras{
+
+	margin-top: 0;
+
+}
+
+@media only screen and (min-width: 48em){
+
+	#bannerTopo{
+
+		padding-top: 142px;
+
+	}
+
+	.banner-topo-img{
+
+		float: right;
+
+		margin-top: -40px;
+
+		margin-bottom: -24px;
+
+	}
+
+	#vitrineSeguradoras{
+
+		margin-top: 72px;
+
+	}
+
+}
+
+a.tituloArtigo, a.chamadaArtigo, a.tituloArtigo:hover, a.chamadaArtigo:hover{
+
+	text-decoration: none;
+
+	color: inherit;
+
+}
+
+.tituloArtigo h4{
+
+	font-size: 20px;
+
+	text-align: left;
+
+	padding: 5px 10px;
+
+	color: #005b88;
+
+}
+
+.tituloArtigo h4:hover{
+
+	/*font-size: 20.02px;*/
+
+	color: #002d44;
+
+}
+
+a.chamadaArtigo h5{
+
+	font-size: 16px;
+
+	text-align: left;
+
+	padding: 5px 10px;
+
+	color: #000;
+
+	text-transform: inherit;
+
+	font-weight: normal;
+
+	margin-top: -30px;
+
+	margin-bottom: 30px;
+
+}
+
+.chamadaArtigo{
+
+	font-size: 16px;
+
+	text-align: left !important;
+
+	padding: 5px 10px !important;
+
+	color: #000;
+
+}
+
+.chamadaArtigo:hover, .chamadaArtigo h5:hover{
+
+	/*font-size: 16.16px;*/
+
+}
+
+.imagemSolucao img{
+
+	width: 150px;
+
+	height: 150px;
+
+	margin: 24px auto -10px auto;
+
+	display: block;
+
+}
+
+.imagemArtigo img{
+
+	display: block;
+
+	border-radius: 20px 20px 0 0;
+
+}
+
+/*.card-solucao-meta a{
+
+	color: #000 !important;
+
+	padding: 1px;
+
+}
+
+.card-solucao-meta a:hover{
+
+	text-decoration: none;
+
+}*/
+
+a.linkSolucaoInfo button, a.linkSolucao button, a.wp-block-button__link{
+
+	background-color: #03a9f4;
+
+	border-radius: 30px;
+
+	margin: 0 auto 10px auto;
+
+	line-height: 10px;
+
+	text-transform: lowercase;
+
+	font-weight: 500;
+
+	color: #fff;
+
+}
+
+a.linkSolucaoInfo:hover button,a.linkSolucao:hover button, a.wp-block-button__link{
+
+	background-color: transparent;
+
+	border: 2px solid #03a9f4;
+
+	color: #03a9f4;
+
+}
+
+a.recent button{
+
+	background-color: transparent;
+
+	border: 2px solid #03a9f4;
+
+	border-radius: 30px;
+
+	line-height: 10px;
+
+	color: #03a9f4;
+
+	margin: 14px auto 0 auto;
+
+	text-transform: lowercase;
+
+	font-weight: 500;
+
+	display: block;
+
+}
+
+a.recent:hover button{
+
+	background-color: #03a9f4;
+
+	border: 2px solid #03a9f4;
+
+	/*line-height: 11px;*/
+
+	color: #fff;
+
+	font-weight: 700;
+
+}
+
+/* Blocks */
+
+/*p.wp-block-cover-text{
+
+	text-align: center !important;
+
+}*/
+
+/*.container-article{
+
+	display: block;
+
+	position: relative;
+
+	width: 100%;
+
+	margin: auto;
+
+	border: none !important;
+
+}
+
+.solucoes-article{
+
+	display: block;
+
+	position: relative;*/
+
+	/*width: 118.802082061767585230427%;*/
+
+	/*margin: auto -10%;*/
+
+	/*border: none !important;
+
+}
+
+.banner-topo{
+
+	display: block;
+
+	margin: auto;
+
+	padding: 0;
+
+	text-decoration: none;
+
+}
+
+.banner-topo img{
+
+	vertical-align: middle;
+
+	border-style: none;
+
+	margin-right: 25px !important;
+
+	display: inline-block;
+
+	float: right !important;
+
+	width: 60%;
+
+	margin-bottom: -2px;
+
+}
+
+.banner-topo a, .banner-topo a:hover{
+
+	text-decoration: none;
+
+	color: #000;
+
+}
+
+.banner-topo a div h1{
+
+	font-size: 40px;
+
+	font-weight: bold;
+
+	text-decoration: none;
+
+	text-align: left;
+
+	width: 40%;
+
+	margin-top: 50px;
+
+	color: #b164da;
+
+}
+
+.banner-topo a div h2{
+
+	font-size: 24px;
+
+	font-weight: bold;
+
+	text-decoration: none;
+
+	text-align: left;
+
+	margin-top: -18px;
+
+	width: 40%;
+
+	margin-bottom: -132px;
+
+}
+
+.cta-orcamento{
+
+	background-image: -webkit-linear-gradient(right, #5c39e5, #7043e2, #a15cdc, #c06cd8, #c06cd8);
+
+	background-image: -o-linear-gradient(right, #5c39e5, #7043e2, #a15cdc, #c06cd8, #c06cd8);
+
+	background-image: linear-gradient(to left, #5c39e5, #7043e2, #a15cdc, #c06cd8, #c06cd8);
+
+	width: 100%;
+
+	color: #fff;
+
+	text-align: center;
+
+	width: 118.802082061767585230427%;
+
+	margin: auto -10%;
+
+	min-height: 120px;
+
+	padding-top: 40px;
+
+}
+
+.solucoes{
+
+}
+
+.solucoes h3{
+
+	text-align: center;
+
+	margin: 50px auto;
+
+}
+
+.card-solucao{
+
+	display: inline-block;
+
+	margin: 10px auto;
+
+	padding: 20px;
+
+	text-decoration: none;
+
+	border-radius: 30px;
+
+	width: 49%;
+
+}
+
+.card-solucao-meta{
+
+	display: block;
+
+	width: 60%;
+
+	vertical-align: middle;
+
+	text-align: center;
+
+	margin: auto;
+
+}
+
+a.imagemSolucao{
+
+	display: block;
+
+	width: 100%;
+
+	vertical-align: middle;
+
+}
+
+a.imagemSolucao img{
+
+	height: auto;
+
+	width: 150px;
+
+	position: relative;
+
+	display: block;
+
+	margin: 20px auto;
+
+}
+
+a.tituloSolucao, a.chamadaSolucao, a.botaoSolucao, a.tituloSolucao:hover, a.chamadaSolucao:hover, a.botaoSolucao:hover{
+
+	text-decoration: none;
+
+	font-size: inherit;
+
+	color: inherit;
+
+}
+
+.card-solucao a h2{
+
+	font-size: 20px;
+
+	font-weight: bold;
+
+	text-decoration: none;
+
+	text-align: center;
+
+}
+
+
+
+.card-solucao a h3{
+
+	font-size: 18px;
+
+	text-decoration: none;
+
+	text-align: center;
+
+}
+
+*/
+
+.wrap {
+    margin-left: auto;
+    margin-right: auto;
+    /*max-width: 100vw !important;*/
+    /*padding-left: 0 !important;
+    padding-right: 0 !important;*/
+}
+
+/* Front page */
+
+.panel-content .wrap {
+
+	margin-left: auto;
+
+	margin-right: auto;
+
+/*	max-width: 100vw !important; */
+	padding-left: 10px; 
+
+	padding-right: 10px; 
+
+	float: left;
+
+}
+
+.panel-image{
+
+	background-size: auto;
+
+}
+
+.panel-image:before{
+
+	background: none !important;
+
+}
+
+@media screen and (min-width: 48em){
+
+	.twentyseventeen-panel.post-60.page.type-page.status-publish.has-post-thumbnail.hentry{
+
+		width: 47.91829%;
+
+		display: inline-block;
+
+		float: left;
+
+		margin: 10px;
+
+	}
+
+	body.page-two-column:not(.archive) #primary .entry-header{
+
+		float: left;
+
+		width: 100%;
+
+		margin-top: 10px;
+
+		margin-bottom: 10px;
+
+	}
+
+	.entry-header h2{
+
+		width: 100% !important;
+
+		text-align: center;
+
+	}
+
+	.panel-image {
+
+		/*height: 35vh;*/
+
+		max-height: 400px;
+
+	}
+
+	.panel-content .wrap {
+
+		max-width: 1000px; 
+
+		padding-left: 0; 
+
+		padding-right: 0; 
+
+		float: left;
+
+	}
+
+}
+
+@media screen and (min-width: 30em){
+
+	.panel-content .wrap {
+
+		padding-bottom: 0;
+
+		padding-top: 0;
+
+	}
+
+}
+
+/* Formulário de Cotação Online */
+
+div#wpcf7-f157-p158-o1{
+
+	width: 100% !important;
+
+	margin: 36px auto;
+
+	background-color: whitesmoke;
+
+	border-radius: 30px;
+
+	padding: 40px;
+
+}
+
+div#wpcf7-f157-p158-o1 form{
+
+	padding: 20px;
+
+}
+
+select.wpcf7-form-control.wpcf7-select{
+	height: 40%;
+}

@@ -1,0 +1,30 @@
+/*
+ Theme Name:   Agata Mac
+ Theme URI:    https://agatamacsaude.com.br
+ Description:  Tema desenvolvido para a corretora de seguros corporativos Agata Mac Saúde
+ Author:       Marcelo Diament, Djament Comunicação
+ Author URI:   https://djament.com.br/cv
+ Template:     twentyseventeen
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         bootstrap, left-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  agatamac
+*/
+/* Página Login WP */
+body.login div#login h1 {
+	font-family: 'Marcellus', sans-serif;
+	text-transform: uppercase;
+	color: #000;
+}
+body.login div#login form#loginform p.submit input#wp-submit{
+	background-color: #229dd5 !important;
+}
+
+a.button.button-primary.button-hero {
+	background-color: #229dd5 !important;
+}
+
+#adminmenu div.wp-menu-name:active, .wp-has-current-submenu{
+	background-color: #229dd5 !important;
+}
