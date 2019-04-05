@@ -35,164 +35,22 @@
 	</article>
 </section>
 
-
 <span class="clearfix"></span>
 
+<?php
+	// INCLUSÃO DA VITRINE DE SEGUROS PJ
+	get_template_part( 'inc/inc', 'seguros-pj' );
+?>
 
-<!-- VITRINE DE SOLUÇÕES PJ -->
-<section class="container-fluid" id="vitrineSolucoes">
-		
-	<?php if( have_rows('solucoes') ): ?>
+<?php
+	// INCLUSÃO DA VITRINE DE SEGUROS PF
+	get_template_part( 'inc/inc', 'seguros-pf' );
+?>
 
-		<div class="container">
-			<h3 class="col-12">Soluções Completas em Seguros e Benefícios para sua Empresa</h3>
-			<div class="row">
-				<?php while( have_rows('solucoes') ): the_row(); 
-
-					// vars
-					$imagemSolucao = get_sub_field('imagem_solucao');
-					$tituloSolucao = get_sub_field('titulo_solucao');
-					$chamadaSolucao = get_sub_field('chamada_solucao');
-					$linkSolucao = get_sub_field('link_solucao');
-					$linkSolucaoInfo = get_sub_field('link_solucao_info');
-					//if ($linkSolucao['target'] == '_blank'){ $linkRel = 'external'; } else { $linkRel = 'next'; };
-					//if ($linkSolucaoInfo['target'] == '_blank'){ $linkRelInfo = 'external'; } else { $linkRelInfo = 'next'; };
-					?>
-
-					<article class="col-12 col-sm-6 col-md-4 col-lg-3">
-						<?php if($imagemSolucao) :; ?>
-						<a class="imagemSolucao" rel="next" href="<?php echo $linkSolucao['url']; ?>" title="<?php echo $linkSolucao['alt']; ?>" target="<?php echo $linkSolucao['target']; ?>">
-							<img src="<?php echo $imagemSolucao['url']; ?>" alt="<?php echo $imagemSolucao['alt']; ?>" width="150" height="150" style="width:150px;height:150px;" />
-						</a>
-						<?php endif; ?>
-						<div class="card-solucao-meta">
-							<?php if($tituloSolucao) :; ?>
-							<a class="tituloSolucao" rel="next" href="<?php echo $linkSolucao['url']; ?>" title="<?php echo $linkSolucao['alt']; ?>" target="<?php echo $linkSolucao['target']; ?>">
-								<h2><?php echo $tituloSolucao; ?></h2>
-							</a>
-							<?php endif; ?>
-							<?php if($chamadaSolucao) :; ?>
-							<a class="chamadaSolucao" rel="next" href="<?php echo $linkSolucao['url']; ?>" title="<?php echo $linkSolucao['alt']; ?>" target="<?php echo $linkSolucao['target']; ?>">
-						    	<p><?php echo $chamadaSolucao ?> </p>
-							</a>
-							<?php endif; ?>
-							<?php if($linkSolucaoInfo) :; ?>
-							<a class="linkSolucaoInfo" rel="next" href="<?php echo $linkSolucaoInfo['url']; ?>" title="<?php echo $linkSolucaoInfo['alt']; ?>" target="<?php echo $linkSolucaoInfo['target']; ?>">
-								<button>
-									<?php echo $linkSolucaoInfo['title']; ?>
-								</button>
-							</a>
-							<?php endif; ?>
-							<?php if($linkSolucao) :; ?>
-							<a class="linkSolucao" rel="next" href="<?php echo $linkSolucao['url']; ?>" title="<?php echo $linkSolucao['alt']; ?>" target="<?php echo $linkSolucao['target']; ?>">
-								<button>
-									<?php echo $linkSolucao['alt']; ?>
-								</button>
-							</a>
-							<?php endif; ?>
-						</div>
-					</article>
-
-				<?php endwhile; ?>
-			</div>
-		</div>
-
-	<?php endif; ?>
-
-	</article>
-</section>
-
-<span class="clearfix"></span>
-
-<!-- VITRINE DE SEGUROS PF -->
-<section class="container-fluid" id="vitrineSolucoesPF">
-		
-	<?php if( have_rows('solucoes_pf') ): ?>
-
-		<div class="container">
-			<h3 class="col-12">Soluções Completas em Seguros para Você e sua Família</h3>
-			<div class="row">
-				<?php while( have_rows('solucoes_pf') ): the_row(); 
-
-					// vars
-					$imagemSolucaoPf = get_sub_field('imagem_solucao_pf');
-					$tituloSolucaoPf = get_sub_field('titulo_solucao_pf');
-					$chamadaSolucaoPf = get_sub_field('chamada_solucao_pf');
-					$linkSolucaoPf = get_sub_field('link_solucao_pf');
-					//if ($linkSolucaoPf['target'] == '_blank'){ $linkRelPf = 'external'; } else { $linkRelPf = 'next'; };
-					$linkSolucaoPfInfo = get_sub_field('link_solucao_pf_info');
-					//if ($linkSolucaoPfInfo['target'] == '_blank'){ $linkRelPfInfo = 'external'; } else { $linkRelPfInfo = 'next'; };
-					?>
-
-					<article class="col-12 col-sm-6 col-md-4 col-lg-3">
-						<?php if($imagemSolucaoPf) :; ?>
-						<a class="imagemSolucao" rel="external" href="<?php echo $linkSolucaoPf['url']; ?>" title="<?php echo $linkSolucaoPf['alt']; ?>" target="<?php echo $linkSolucaoPf['target']; ?>">
-							<img src="<?php echo $imagemSolucaoPf['url']; ?>" alt="<?php echo $imagemSolucaoPf['alt']; ?>" width="150" height="150" style="width:150px;height:150px;" />
-						</a>
-						<?php endif; ?>
-						<div class="card-solucao-meta">
-							<?php if($tituloSolucaoPf) :; ?>
-							<a class="tituloSolucao" rel="external" href="<?php echo $linkSolucaoPf['url']; ?>" title="<?php echo $linkSolucaoPf['alt']; ?>" target="<?php echo $linkSolucaoPf['target']; ?>">
-								<h2><?php echo $tituloSolucaoPf; ?></h2>
-							</a>
-							<?php endif; ?>
-							<?php if($chamadaSolucaoPf) :; ?>
-							<a class="chamadaSolucao" rel="external" href="<?php echo $linkSolucaoPf['url']; ?>" title="<?php echo $linkSolucaoPf['alt']; ?>" target="<?php echo $linkSolucaoPf['target']; ?>">
-						    	<p><?php echo $chamadaSolucaoPf; ?> </p>
-							</a>
-							<?php endif; ?>
-							<?php if($linkSolucaoPfInfo) :; ?>
-							<a class="linkSolucao" rel="next" href="<?php echo $linkSolucaoPfInfo['url']; ?>" title="<?php echo $linkSolucaoPfInfo['alt']; ?>" target="<?php echo $linkSolucaoPfInfo['target']; ?>">
-								<button>
-									<?php echo $linkSolucaoPfInfo['title']; ?>
-								</button>
-							</a>
-							<?php endif; ?>
-							<?php if($linkSolucaoPf) :; ?>
-							<a class="linkSolucao" rel="external" href="<?php echo $linkSolucaoPf['url']; ?>" title="<?php echo $linkSolucaoPf['alt']; ?>" target="<?php echo $linkSolucaoPf['target']; ?>">
-								<button>
-									<?php echo $linkSolucaoPf['alt']; ?>
-								</button>
-							</a>
-							<?php endif; ?>
-						</div>
-					</article>
-
-				<?php endwhile; ?>
-			</div>
-		</div>
-
-	<?php endif; ?>
-
-	</article>
-</section>
-
-<span class="clearfix"></span>
-
-<!-- VITRINE DE SEGURADORAS -->
-<?php if( have_rows('seguradoras') ): ?>
-	<section class="container-fluid" id="vitrineSeguradoras">
-		<article>
-			<div class="container">
-				<h3 class="col-12">Principais Seguradoras e Operadoras Parceiras</h3>
-				<h6>A <span style="font-family:Marcellus,sans-serif;">AGATA MAC</span> é parceira das maiores e melhores operadoras e seguradoras do país</h6>
-				<div class="row">
-					<?php while( have_rows('seguradoras') ): the_row(); 
-						// vars
-						$logoSeguradora = get_sub_field('logo_seguradora');
-						$nomeSeguradora = get_sub_field('nome_seguradora');
-					?>
-						<article class="col-6 col-sm-4 col-md-3 seguradora-card">
-							<img class="seguradora-imagem" src="<?php echo $logoSeguradora['url']; ?>" alt="<?php echo $logoSeguradora['alt']; ?>" title="<?php echo $logoSeguradora['alt']; ?>" width="120" height="120" style="width:120px;height:120px;" />
-						</article>
-					<?php endwhile; ?>
-				</div>
-			</div>
-		</article>
-	</section>
-<?php endif; ?>
-
-<span class="clearfix"></span>
+<?php
+	// INCLUSÃO DA VITRINE DE SEGURADORAS
+	get_template_part( 'inc/inc', 'seguradoras' );
+?>
 
 <!-- BLOG - ARTIGOS, DICAS E NOTÍCIAS -->
 <section class="container-fluid" id="postsRecentes">
