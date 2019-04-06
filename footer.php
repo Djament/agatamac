@@ -17,7 +17,43 @@
 			</div><!-- #content -->
 		</main>
 
-		
+		<!-- DESTAQUES DE COTAÇÕES -->
+		<div class="destaque-cotacoes row">
+			<?php if( have_rows('seguro_cotacao_pf', 'option') || have_rows('seguro_cotacao_pj', 'option') ): ?>
+				<div class="escondido" id="listaCotacoes" class="col-12">
+					<div class="col-6" style="display:inline-block;">
+						<h4 style="color:#fff !important;">Pessoa Física</h4>
+					    <?php while( have_rows('seguro_cotacao_pf', 'option') ): the_row(); ?>
+					       	<?php
+					       		$cotacaoPf = get_sub_field('link_seguro_cotacao');
+					       		if( $cotacaoPf['url'] ){ $cotacaoPfUrl = $cotacaoPf['url']; } else { $cotacaoPfUrl = 'https://agatamacsaude.com.br'; };
+					       		if( $cotacaoPf['target'] ){ $cotacaoPfTarget = $cotacaoPf['target']; } else { $cotacaoPfTarget = '_blank'; };
+					       		if( $cotacaoPf['title'] ){ $cotacaoPfTitle = $cotacaoPf['title']; } else { $cotacaoPfTitle = 'Confira!'; };
+					       	?>
+							   	<a target="_blank" class="cotacao-online-seguro" rel="external" href="<?php echo $cotacaoPfUrl; ?>" title="<?php echo $cotacaoPfTitle; ?>" target="<?php echo $cotacaoPfTarget; ?>">
+						   			<?php echo $cotacaoPfTitle . '<i class="fas fa-external-link"></i>'; ?>
+						   		</a>
+						<?php endwhile; ?>
+					</div>
+					<div class="col-6" style="display:inline-block;">
+						<h4 style="color:#fff !important;">Empresa</h4>
+					    <?php while( have_rows('seguro_cotacao_pj', 'option') ): the_row(); ?>
+					       	<?php
+					       		$cotacaoPj = get_sub_field('link_seguro_cotacao');
+					       		if( $cotacaoPj['url'] ){ $cotacaoPjUrl = $cotacaoPj['url']; } else { $cotacaoPjUrl = 'https://agatamacsaude.com.br'; };
+					       		if( $cotacaoPj['target'] ){ $cotacaoPjTarget = $cotacaoPj['target']; } else { $cotacaoPjTarget = '_blank'; };
+					       		if( $cotacaoPj['title'] ){ $cotacaoPjTitle = $cotacaoPj['title']; } else { $cotacaoPjTitle = 'Confira!'; };
+					       	?>
+							   	<a target="_blank" class="cotacao-online-seguro" rel="next" href="<?php echo $cotacaoPjUrl; ?>" title="<?php echo $cotacaoPjTitle; ?>" target="<?php echo $cotacaoPjTarget; ?>">
+						   			<?php echo $cotacaoPjTitle . '<i class="fas fa-external-link"></i>'; ?>
+						   		</a>
+						<?php endwhile; ?>
+					</div>
+				</div>
+				<div id="maisCotacoes">COTAÇÃO ONLINE <i class="fa fa-caret-up" id="setaMaisCotacoes"></i></div>
+			<?php endif; ?>
+		</div>
+
 		<footer id="colophon" class="site-footer" role="contentinfo">
 			<div class="wrap">
 				<?php
@@ -50,32 +86,7 @@
 		</footer><!-- #colophon -->
 		
 		
-		<!-- DESTAQUES DE COTAÇÕES -->
-		<div class="destaque-cotacoes row">
-			<?php if( have_rows('seguro_cotacao_pf', 'option') || have_rows('seguro_cotacao_pj', 'option') ): ?>
-				<div class="escondido" id="listaCotacoes" class="col-12">
-					<div class="col-6" style="display:inline-block;">
-						<h4 style="color:#fff !important;">Pessoa Física</h4>
-					    <?php while( have_rows('seguro_cotacao_pf', 'option') ): the_row(); ?>
-					       	<?php $cotacao = get_sub_field('link_seguro_cotacao'); ?>
-							   	<a target="_blank" class="cotacao-online-seguro" rel="external" href="<?php echo $cotacao['url']; ?>" title="<?php echo $cotacao['title']; ?>" target="<?php echo $cotacao['target']; ?>">
-						   			<?php echo $cotacao['title'] . '<i class="fas fa-external-link"></i>'; ?>
-						   		</a>
-						<?php endwhile; ?>
-					</div>
-					<div class="col-6" style="display:inline-block;">
-						<h4 style="color:#fff !important;">Empresa</h4>
-					    <?php while( have_rows('seguro_cotacao_pj', 'option') ): the_row(); ?>
-					       	<?php $cotacao = get_sub_field('link_seguro_cotacao'); ?>
-							   	<a target="_blank" class="cotacao-online-seguro" rel="next" href="<?php echo $cotacao['url']; ?>" title="<?php echo $cotacao['title']; ?>" target="<?php echo $cotacao['target']; ?>">
-						   			<?php echo $cotacao['title'].'<i class="fas fa-external-link"></i>'; ?>
-						   		</a>
-						<?php endwhile; ?>
-					</div>
-				</div>
-				<div id="maisCotacoes">COTAÇÃO ONLINE <i class="fa fa-caret-up" id="setaMaisCotacoes"></i></div>
-			<?php endif; ?>
-		</div>
+		
 		<script>
 			const linkCotacoes = document.querySelector('#maisCotacoes');
 			const setaCotacoes = document.querySelector('#setaMaisCotacoes');
