@@ -293,7 +293,7 @@ strong.breadcrumb_last{
 
 	#masthead{
 
-		z-index: 999999;
+		z-index: 99;
 
 		top: 80px;
 
@@ -314,6 +314,8 @@ strong.breadcrumb_last{
 		float: left;
 
 		min-width: 100% !important;
+		max-width: 100% !important;
+		padding: 0 !important;
 
 	}
 
