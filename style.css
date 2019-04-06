@@ -166,7 +166,7 @@ a.cotacao-online-seguro{
 
 #masthead{
 
-	z-index: 999999;
+	z-index: 99;
 
 }
 
@@ -293,9 +293,13 @@ strong.breadcrumb_last{
 
 	#masthead{
 
-		z-index: 999999;
+		z-index: 99;
 
 		top: 80px;
+
+		position: fixed;
+    	
+    	width: 100%;
 
 	}
 	
@@ -314,6 +318,8 @@ strong.breadcrumb_last{
 		float: left;
 
 		min-width: 100% !important;
+
+		padding: 0;
 
 	}
 
