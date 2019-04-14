@@ -168,7 +168,7 @@ a.cotacao-online-seguro{
 
 	z-index: 99;
 	position: fixed;
-    width: 100%;
+  width: 100%;
 }
 
 .main-navigation li{
@@ -298,6 +298,10 @@ strong.breadcrumb_last{
 		z-index: 99;
 
 		top: 55px;
+
+		position: fixed;
+    	
+    	width: 100%;
 
 		position: fixed;
     	
