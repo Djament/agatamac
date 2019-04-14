@@ -36,9 +36,9 @@ if( function_exists('acf_add_options_page') ) {
 
 	acf_add_options_page(array(
 
-		'page_title' 	=> 'Extra',
+		'page_title' 	=> 'Seguros',
 
-		'menu_title'	=> 'Extra',
+		'menu_title'	=> 'Seguros',
 
 		'menu_slug' 	=> 'extra-settings',
 
@@ -46,7 +46,9 @@ if( function_exists('acf_add_options_page') ) {
 
 		'redirect'		=> false,
 
-		'menu_icon' => 'dashicons-megaphone'
+		'icon_url' => 'dashicons-megaphone',
+
+		'position' => 2
 
 	));
 
@@ -111,7 +113,6 @@ add_filter( 'get_the_archive_title', 'agatamac_archive_title' );
 
 
 /* Customizando a página de login */
-
 
 
 	/* Logo */
@@ -249,5 +250,26 @@ add_action('admin_enqueue_scripts', 'my_admin_theme_style');
 	    ';
 
 	}
+
+	//Logo no Menu Lateral do Dashboard Administrativo
+	function agatamac_custom_logo() {
+		echo '
+		<style type="text/css">
+		#wpadminbar #wp-admin-bar-wp-logo > .ab-item .ab-icon:before {
+		background-image: url(' . get_bloginfo('stylesheet_directory') . '/images/custom-logo.png) !important;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		color:rgba(0, 0, 0, 0);
+		}
+		#wpadminbar #wp-admin-bar-wp-logo.hover > .ab-item .ab-icon {
+		background-position: 0 0;
+		}
+		</style>
+		';
+	}
+	 
+	//hook into the administrative header output
+	add_action('wp_before_admin_bar_render', 'agatamac_custom_logo');
 
 ?>
