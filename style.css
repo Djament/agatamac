@@ -457,16 +457,32 @@ strong.breadcrumb_last{
 
 	.has-sidebar:not(.error404) #primary {
 
-		width: 70%;
+		width: 100%;
 		margin-top: 90px;
 
 	}
 
 	.has-sidebar #secondary {
 
-		width: 25%;
+		width: 100%;
 
 	}
+
+@media screen and (min-width: 48em){
+
+	.has-sidebar:not(.error404) #primary {
+		width: 70%;
+		margin-top: 90px;
+	}
+
+	.has-sidebar #secondary {
+		width: 28%;
+		margin-top: 90px;
+		position: sticky;
+		top: 140px;
+	}
+
+}
 
 	div#wpcf7-f157-p158-o1{
 
@@ -483,13 +499,7 @@ strong.breadcrumb_last{
 
 /* Post */
 
-aside#secondary.widget-area{
 
-	position: sticky;
-
-	top: 140px;
-
-}
 
 ul.lista-post, ul.lista-page{
 
