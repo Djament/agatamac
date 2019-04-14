@@ -11,7 +11,7 @@
 						$logoSeguradora = get_sub_field('logo_seguradora');
 						$nomeSeguradora = get_sub_field('nome_seguradora');
 					?>
-						<article class="col-6 col-sm-4 col-md-3 seguradora-card">
+						<article class="col-6 col-sm-3 seguradora-card">
 							<img class="seguradora-imagem" src="<?php echo $logoSeguradora['url']; ?>" alt="<?php echo $logoSeguradora['alt']; ?>" title="<?php echo $logoSeguradora['alt']; ?>" width="120" height="120" style="width:120px;height:120px;" />
 						</article>
 					<?php endwhile; ?>
