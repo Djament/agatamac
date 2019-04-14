@@ -125,9 +125,9 @@
 
 			function menuRolagem() {
 			    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-			        menu.style = 'background-color: rgba(3,169,244,0.95) !important; height: 78px;';
+			        menu.style = 'background-color: rgba(3,169,244,0.92) !important;';
 			    } else {
-			        menu.style = 'background-color: rgba(3,169,244,1) !important; height: 80px;';
+			        menu.style = 'background-color: rgba(3,169,244,1) !important;';
 			    }
 			}
 
