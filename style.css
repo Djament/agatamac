@@ -168,6 +168,7 @@ a.cotacao-online-seguro{
 
 	z-index: 99;
 	position: fixed;
+	top: 0;
     width: 100%;
 }
 
@@ -458,13 +459,14 @@ strong.breadcrumb_last{
 	.has-sidebar:not(.error404) #primary {
 
 		width: 100%;
-		margin-top: 90px;
+		/*margin-top: 65px !important;*/
 
 	}
 
 	.has-sidebar #secondary {
 
 		width: 100%;
+		/*margin-top: 65px !important;*/
 
 	}
 
@@ -472,15 +474,19 @@ strong.breadcrumb_last{
 
 	.has-sidebar:not(.error404) #primary {
 		width: 70%;
-		margin-top: 90px;
+		/*margin-top: 65px !important;*/
 	}
 
 	.has-sidebar #secondary {
 		width: 28%;
-		margin-top: 90px;
+		/*margin-top: 65px !important;*/
 		position: sticky;
 		top: 140px;
 	}
+
+	header.page-header{
+	margin-top: 100px !important;
+}
 
 }
 
@@ -496,7 +502,9 @@ strong.breadcrumb_last{
 	}
 
 }
-
+header.page-header{
+	margin-top: 84px !important;
+}
 /* Post */
 
 
@@ -1342,7 +1350,11 @@ a.tituloSolucao, a.chamadaSolucao, a.botaoSolucao, a.tituloSolucao:hover, a.cham
 }
 
 */
-
+@media only screen and (max-width: 48em){
+	.wrap{
+		max-width: 100vw !important;
+	}
+}
 .wrap {
     margin-left: auto;
     margin-right: auto;
@@ -1380,7 +1392,7 @@ a.tituloSolucao, a.chamadaSolucao, a.botaoSolucao, a.tituloSolucao:hover, a.cham
 
 }
 
-@media screen and (min-width: 48em){
+@media only screen and (min-width: 48em){
 
 	.twentyseventeen-panel.post-60.page.type-page.status-publish.has-post-thumbnail.hentry{
 
