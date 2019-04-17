@@ -15,15 +15,30 @@
 ?><!DOCTYPE html prefix="og: http://ogp.me/ns#">
 <html <?php language_attributes(); ?> class="no-js no-svg">
 <head>
-	
+	<!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WHWZ9LS');</script>
+  <!-- End Google Tag Manager -->
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122228703-1"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    //window.dataLayer = window.dataLayer || [];
+    //function gtag(){dataLayer.push(arguments);}
+    //gtag('js', new Date());
 
-    gtag('config', 'UA-122228703-1');
+    //gtag('config', 'UA-122228703-1');
+  </script>
+  <script>
+    document.querySelector("#gform_submit_button_1").setAttribute("onclick", "gtag('event', 'Cotar', {'event_category': 'PJ','event_label': 'Saúde'});");
+    document.querySelector("#gform_submit_button_2").setAttribute("onclick", "gtag('event', 'Cotar', {'event_category': 'PJ','event_label': 'Odonto'});");
+    document.querySelector("#gform_submit_button_3").setAttribute("onclick", "gtag('event', 'Cotar', {'event_category': 'PJ','event_label': 'Vida'});");
+    document.querySelector("#gform_submit_button_4").setAttribute("onclick", "gtag('event', 'Cotar', {'event_category': 'PJ','event_label': 'Patrimonial'});");
+    document.querySelector("#gform_submit_button_5").setAttribute("onclick", "gtag('event', 'Cotar', {'event_category': 'PJ','event_label': 'Frotas'});");
+    document.querySelector("#gform_submit_button_6").setAttribute("onclick", "gtag('event', 'Cotar', {'event_category': 'PJ','event_label': 'Gestão Benefícios'});");
   </script>
   <meta name="google-site-verification" content="t61CI7nodhTTvutGegYzTMIQwAENoPQZa4fcS4um_18" />
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -95,6 +110,12 @@
 </head>
 
 <body <?php body_class(); ?>>
+  
+  <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WHWZ9LS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentyseventeen' ); ?></a>
 
